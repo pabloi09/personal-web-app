@@ -8,7 +8,7 @@ import { combineReducers } from "redux"
 const awardsItems = (state = [], action) => {
     switch (action.type) {
         case SET_DATA:
-            return action.data.awardItems
+            return action.data.awardItems ? action.data.awardItems:[]
         case REFRESH_AWARD:
             if (contains(state, action.award)) {
                 state = state.map(element => {
@@ -60,7 +60,7 @@ const educationItems = (state = [], action) => {
             }
             return state
         case SET_DATA:
-            return action.data.educationItems
+            return action.data.educationItems ? action.data.educationItems:[]
         default:
             return state
     }
@@ -69,7 +69,7 @@ const educationItems = (state = [], action) => {
 const experienceItems = (state = [], action) => {
     switch (action.type) {
         case SET_DATA:
-            return action.data.experienceItems
+            return action.data.experienceItems ? action.data.experienceItems:[]
         case REFRESH_EXPERIENCE:
             if (contains(state, action.experience)) {
                 state = state.map(element => {
@@ -100,7 +100,7 @@ const experienceItems = (state = [], action) => {
 const presentationItems = (state = [], action) => {
     switch (action.type) {
         case SET_DATA:
-            return action.data.presentationItems
+            return action.data.presentationItems ? action.data.presentationItems:[]
         case REFRESH_PRESENTATION:
             if (contains(state, action.presentation)) {
                 state = state.map(element => {
@@ -130,7 +130,7 @@ const presentationItems = (state = [], action) => {
 const projectItems = (state = [], action) => {
     switch (action.type) {
         case SET_DATA:
-            return action.data.projectItems
+            return action.data.projectItems ? action.data.projectItems:[]
         case REFRESH_PROJECT:
             if (contains(state, action.project)) {
                 state = state.map(element => {
