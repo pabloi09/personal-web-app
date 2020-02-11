@@ -21,7 +21,12 @@ class MainScreen extends Component {
     render() {
         return (
             <div className="App">
-                <DarkNavbar page={this.state.currentPage} preview={this.props.preview} data={this.props.learnMoreItems}/>
+                <DarkNavbar page={this.state.currentPage} preview={this.props.preview} data={this.props.learnMoreItems}
+                            sections = {[this.props.presentationItems != [],
+                                         this.props.educationItems != [] ,
+                                         this.props.experienceItems != [] ,
+                                         this.props.projectItems != [] ,
+                                         this.props.awardsItems != [] ,]}/>
                 <PresentationCarousel mobile = {this.props.mobile} data = {this.props.presentationItems} />
                 <EducationSection mobile = {this.props.mobile} data = {this.props.educationItems}/>
                 <ExperienceSection mobile = {this.props.mobile} data = {this.props.experienceItems}/>

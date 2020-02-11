@@ -3,7 +3,6 @@ import os
 def format(line):
     if ":" in line:
         return "  \"" + line[2:line.index(":")] + "\"" + line[line.index(":"):len(line)]
-    
     return line
 
 os.system('curl -sL https://deb.nodesource.com/setup_12.x >> installNpm')
@@ -16,12 +15,10 @@ os.system("npm install")
 os.system("curl -Lo ./firebase_bin https://firebase.tools/bin/linux/latest")
 os.system("./firebase_bin login")
 print("NOW, YOU WILL BE ASKED SOME PARAMETERS\n")
-print("   + Write 'y' and press enter")
 print("   + Select the project you have created")
 print("   + Select ONLY Hosting with the spacebar (moving with the arrows) and press enter\n")
 print("   + Write 'build' and press enter\n")
-print("   + Write 'no' and press enter \n")
-print("   + Write 'no' and press enter\n")
+print("   + Write 'y' and press enter \n")
 print("Press enter when you are ready\n")
 input()
 os.system("./firebase_bin init")

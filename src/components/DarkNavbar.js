@@ -6,6 +6,12 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 import * as firebase from '../Firebase'
 import {name} from "../constants"
 
+const sections = [["#presentation" ,"presentation", "Presentation"],
+                  ["#education" ,"education", "Education"],
+                  ["#experience" ,"experience", "Experience"],
+                  ["#projects" ,"projects", "Projects"],
+                  ["#awards" ,"awards", "awards"]]
+
 export default class DarkNavbar extends React.Component{
     state = {
         isSignedIn: false, // Local signed-in state.
@@ -57,17 +63,15 @@ export default class DarkNavbar extends React.Component{
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto" defaultActiveKey="#presentation">
-                    <Nav.Link href="#presentation" active={this.props.page==="presentation"} >Presentation</Nav.Link>
-                    <Nav.Link href="#education" active={this.props.page==="education"} >Education</Nav.Link>
-                    <Nav.Link href="#experience" active={this.props.page==="experience"}>Experience</Nav.Link>
-                    <Nav.Link href="#projects" active={this.props.page==="projects"}>Projects</Nav.Link>
-                    <Nav.Link href="#awards" active={this.props.page==="awards"}>Awards</Nav.Link>
+                    {sections.map((section,index)=>{
+                        this.props.sections[index]? <Nav.Link href={section[0]} active={this.props.page===section[1]} key={index}>{section[2]}</Nav.Link>:<></>
+                    })}
                     </Nav>
                     <Nav>
                     <NavDropdown title="Learn more" id="collasible-nav-dropdown">
                         {this.props.data.map((item,index)=><NavDropdown.Item key ={index} href = {this.state.urls[item.resource]} target = "_blank">{item.title}</NavDropdown.Item>)}
                         <NavDropdown.Divider />
-                        <NavDropdown.Item>Create a web like this one</NavDropdown.Item>
+                        <NavDropdown.Item href="https://github.com/pabloi09/personal-web-app">Create a web like this one</NavDropdown.Item>
                     </NavDropdown>
                     {this.props.preview ? <div></div>:
                         !this.state.isSignedIn?
