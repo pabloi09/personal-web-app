@@ -159,7 +159,7 @@ In the windows search bar, look for  Apps & features, search Ubuntu and click on
 
 Once it has finished (*it can last a couple of minutes*), continue with the last step
 
-##### 1. Disable this feature.
+##### 3. Disable this feature.
 
    Open the powershell with administrator privileges. Then type/paste with a right click
 ```
