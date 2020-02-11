@@ -77,7 +77,10 @@ Click on *Next* , select the storage location you prefer and click on *Done*
 
 ## Install the web app on Firebase
 Go back to the Ubuntu terminal
-##### 1. Type python3 run.py
+##### 1. Type 
+´´´
+python3 run.py
+´´´
 ##### 2. Read what the terminal says and follow the steps
 You will be asked about data before logging in, type "y".Then, to log in you will be redirect to your browser. Use the same google account you used for logging in Firebase
 
