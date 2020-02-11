@@ -3,7 +3,7 @@ This app has been developed to present myself proffesionally to the world. Think
 
 ## Windows installation
 First of all, you need to have a Linux distribution. Nevertheless, it's easy to install one above your Window 10 system
-
+THERE IS A VIDEOTUTORIAL: https://youtu.be/tYbQJ0Pr57Y
 ### Install and configure WSL
 ##### 1. Enable this feature.
 
