@@ -30,11 +30,11 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 ##### 6. Prepare your laptop to installation
 Type the following commands in the terminal and if the terminal asks for confirmation, say yes to everything
   ```
+  sudo apt-get update -y
   sudo apt-get upgrade -y
   ```
   It will last a couple of minutes and show you a screen in which, with your keyboard arrows you need to move to the yes option and confirm   with the enter key
   ```
-  sudo apt-get update -y
   sudo apt-get install python3-pip -y
   sudo apt-get install git -y
   git clone https://github.com/pabloi09/personal-web-app
