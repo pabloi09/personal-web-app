@@ -64,7 +64,7 @@ export default class DarkNavbar extends React.Component{
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto" defaultActiveKey="#presentation">
                     {sections.map((section,index)=>{
-                        this.props.sections[index]? <Nav.Link href={section[0]} active={this.props.page===section[1]} key={index}>{section[2]}</Nav.Link>:<></>
+                        return this.props.sections[index]? <Nav.Link href={section[0]} active={this.props.page===section[1]} key={index}>{section[2]}</Nav.Link>:<></>
                     })}
                     </Nav>
                     <Nav>
