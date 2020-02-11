@@ -10,7 +10,7 @@ const sections = [["#presentation" ,"presentation", "Presentation"],
                   ["#education" ,"education", "Education"],
                   ["#experience" ,"experience", "Experience"],
                   ["#projects" ,"projects", "Projects"],
-                  ["#awards" ,"awards", "awards"]]
+                  ["#awards" ,"awards", "Awards"]]
 
 export default class DarkNavbar extends React.Component{
     state = {
