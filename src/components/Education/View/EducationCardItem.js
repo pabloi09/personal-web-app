@@ -35,8 +35,9 @@ class EducationCardItem extends Component {
     }
 
     componentDidUpdate(){
-        if(this.state.source === preparing){
-            storage.ref().child(this.props.item.image).getDownloadURL().then(firebaseURL => this.setState({source : firebaseURL}))
+        if(this.props.item !== "blank" && this.state.source === preparing){
+            storage.ref().child(this.props.item.image).getDownloadURL()
+            .then(firebaseURL => this.setState({source : firebaseURL}))
         }
         
     }

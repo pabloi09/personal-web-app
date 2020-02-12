@@ -27,11 +27,11 @@ class MainScreen extends Component {
                                          this.props.experienceItems.length !== 0 ,
                                          this.props.projectItems.length !== 0 ,
                                          this.props.awardsItems.length !== 0 ]}/>
-                <PresentationCarousel mobile = {this.props.mobile} data = {this.props.presentationItems} />
-                <EducationSection mobile = {this.props.mobile} data = {this.props.educationItems}/>
-                <ExperienceSection mobile = {this.props.mobile} data = {this.props.experienceItems}/>
-                <ProjectsSection mobile = {this.props.mobile} data = {this.props.projectItems}/>
-                <AwardsSection mobile = {this.props.mobile} data = {this.props.awardsItems}/>
+                {this.props.projectItems.length > 0 ?<PresentationCarousel mobile = {this.props.mobile} data = {this.props.presentationItems} />:<></>}
+                {this.props.educationItems.length > 0 ?<EducationSection mobile = {this.props.mobile} data = {this.props.educationItems}/>:<></>}
+                {this.props.experienceItems.length > 0 ?<ExperienceSection mobile = {this.props.mobile} data = {this.props.experienceItems}/>:<></>}
+                {this.props.projectItems.length > 0 ?<ProjectsSection mobile = {this.props.mobile} data = {this.props.projectItems}/>:<></>}
+                {this.props.awardsItems.length > 0 ?<AwardsSection mobile = {this.props.mobile} data = {this.props.awardsItems}/>:<></>}
             </div>
         );
     }
